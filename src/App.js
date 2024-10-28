@@ -5,6 +5,7 @@ import Home from './pages/Home'; // Import your Home component
 import Jewelry from './pages/Jewelry'; // Import your Jewelry component
 import Electronics from './pages/Electronics'; // Import your Electronics component
 import './App.css'; // Import the CSS file for styling
+import Books from './pages/Books';
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
           <Link className="nav-link" to="/">Home</Link>
           <Link className="nav-link" to="/jewelry">Jewelry</Link>
           <Link className="nav-link" to="/electronics">Electronics</Link>
+          <Link className="nav-link" to="/books">Books</Link>
+
         </nav>
       </header>
 
@@ -22,6 +25,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/jewelry" element={<Jewelry />} />
         <Route path="/electronics" element={<Electronics />} />
+        <Route path="/books" element={<Books />} />
+
       </Routes>
     </Router>
   );

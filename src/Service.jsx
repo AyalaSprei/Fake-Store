@@ -25,6 +25,17 @@ const productService = {
       console.error("Error fetching electronics products:", error);
       throw error;
     }
+  },
+
+  getBooks: async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/`);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching books:", error);
+      throw error;
+    }
   }
 };
 

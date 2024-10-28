@@ -1,14 +1,13 @@
-
-import React from 'react';
-import './ProducrList.css'; // Import the CSS file
+import React from "react";
+import "./ProducrList.css"; // Import the CSS file
 
 const ProductList = ({ products }) => {
-    const category = products.length > 0 ? products[0].category : "";
+  const category = products.length > 0 ? products[0].category : "";
 
   return (
     <div>
- <h1>{category}</h1>      <div  className="product-list">
-        
+      <h1>{category}</h1>{" "}
+      <div className="product-list">
         {products.map((product) => (
           <div className="product-item" key={product.id}>
             <h2 className="product-title">{product.title}</h2>
@@ -24,7 +23,8 @@ const ProductList = ({ products }) => {
               <strong>Price:</strong> ${product.price}
             </p>
             <p className="product-rating">
-              <strong>Rating:</strong> {product.rating.rate} ({product.rating.count} reviews)
+              <strong>Rating:</strong> {product.rating.rate} (
+              {product.rating.count} reviews)
             </p>
           </div>
         ))}

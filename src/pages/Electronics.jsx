@@ -5,6 +5,7 @@ import ProductList from '../copmponents/ProductList';
 
 function Electronics() {
   const [electronicsProducts, setElectronicsProducts] = useState([]);
+   
   useEffect(() => {
     productService.getElectronics().then((data) => setElectronicsProducts(data));
   });
